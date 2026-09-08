@@ -1,0 +1,1257 @@
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080808">
+
+<title>سوپر گوشت یاحقی | کارت ویزیت</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+
+:root{
+    --yellow:#ffd21a;
+    --red:#e52320;
+    --bg:#050505;
+    --card:#101010;
+
+    --muted:#a7a7a7;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#050505;
+    color:#fff;
+    font-family:"Vazirmatn",Tahoma,sans-serif;
+    overflow-x:hidden;
+}
+
+/* Background */
+
+body:before{
+    content:"";
+    position:fixed;
+
+    inset:0;
+    z-index:-2;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #3b2500 0,
+            transparent 36%
+        ),
+        linear-gradient(
+            #080808,
+            #030303
+        );
+}
+
+body:after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    opacity:.055;
+    pointer-events:none;
+
+    background-image:url(
+
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"
+    );
+}
+
+/* Particles */
+
+canvas{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+}
+
+/* Main */
+
+.page{
+    position:relative;
+    z-index:1;
+
+
+    width:min(100%,520px);
+    margin:auto;
+
+    padding:
+        12px
+        12px
+        30px;
+}
+
+/* Top */
+
+.top{
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    font-size:13px;
+    font-weight:800;
+
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+
+.logo{
+    width:34px;
+    height:34px;
+
+    border-radius:11px;
+
+    display:grid;
+    place-items:center;
+
+    background:var(--yellow);
+    color:#111;
+
+    font-weight:900;
+
+    box-shadow:
+        0 0 24px #ffd21a33;
+}
+
+.live{
+
+    font-size:9px;
+    color:#ddd;
+
+    border:
+        1px solid #ffffff18;
+
+    border-radius:20px;
+
+    padding:
+        7px
+        10px;
+
+    background:#ffffff08;
+}
+
+.live i{
+    display:inline-block;
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#75ff72;
+
+
+    box-shadow:
+        0 0 10px #75ff72;
+
+    margin-left:5px;
+
+    animation:pulse 1.4s infinite;
+}
+
+@keyframes pulse{
+
+    50%{
+        opacity:.3;
+    }
+
+}
+
+/* Card */
+
+.card{
+    position:relative;
+    overflow:hidden;
+
+    border:
+
+        1px solid #ffffff16;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111,
+            #090909
+        );
+
+    box-shadow:
+        0 30px 90px #000;
+
+    isolation:isolate;
+}
+
+/* Light sweep */
+
+.card:before{
+    content:"";
+
+    position:absolute;
+
+    z-index:8;
+
+    inset:-50%;
+
+    background:
+        linear-gradient(
+            105deg,
+            transparent 43%,
+            #fff3 49%,
+            #ffd21a55 51%,
+            transparent 57%
+        );
+
+    transform:
+        translateX(-70%)
+        rotate(8deg);
+
+    animation:
+        shine 5.5s
+        ease-in-out
+        infinite;
+
+    pointer-events:none;
+}
+
+
+@keyframes shine{
+
+    0%,42%{
+        transform:
+            translateX(-70%)
+            rotate(8deg);
+    }
+
+    68%,100%{
+        transform:
+            translateX(70%)
+            rotate(8deg);
+    }
+
+}
+
+/* Hero */
+
+.hero{
+    position:relative;
+
+    height:285px;
+
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center 44%;
+
+    display:block;
+
+    transform:scale(1.03);
+
+    filter:
+        saturate(1.08)
+        contrast(1.04);
+}
+
+.hero:after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0001 0%,
+            #0004 35%,
+            #090909 100%
+        ),
+        linear-gradient(
+            90deg,
+            #0007,
+            #0000 55%,
+            #0005
+        );
+}
+
+/* Glowing line */
+
+.hero-glow{
+    position:absolute;
+
+    z-index:3;
+
+    left:-80px;
+    bottom:-110px;
+
+    width:440px;
+    height:190px;
+
+    border-radius:50%;
+
+    border:
+        2px solid var(--yellow);
+
+    box-shadow:
+        0 0 30px var(--yellow),
+        0 0 90px #ffd21a55;
+
+    transform:rotate(-9deg);
+
+    opacity:.85;
+
+    animation:
+        glowmove 4s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes glowmove{
+
+    50%{
+        transform:
+            rotate(-9deg)
+            translateY(-9px);
+
+        opacity:.55;
+    }
+
+}
+
+/* Hero title */
+
+.hero-title{
+    position:absolute;
+
+    z-index:4;
+
+    right:20px;
+    bottom:18px;
+}
+
+.kicker{
+    font-size:12px;
+
+    color:var(--yellow);
+
+    font-weight:700;
+
+    margin-bottom:2px;
+}
+
+h1{
+    font-size:39px;
+
+    line-height:1;
+
+    margin:0;
+
+    font-weight:900;
+
+    letter-spacing:-1.5px;
+
+    text-shadow:
+        0 8px 30px #000;
+}
+
+
+h1 span{
+    color:#fff;
+}
+
+.tag{
+    margin-top:9px;
+
+    color:#ddd;
+
+    font-size:11px;
+}
+
+/* Content */
+
+.content{
+    padding:
+        21px
+        17px
+        20px;
+}
+
+.intro{
+    font-size:14px;
+
+
+    color:#ddd;
+
+    line-height:2;
+
+    text-align:center;
+
+    margin:
+        0
+        0
+        18px;
+}
+
+/* Contact */
+
+.info{
+    display:grid;
+    gap:10px;
+}
+
+.item{
+    display:flex;
+    align-items:center;
+
+    gap:11px;
+
+    min-height:62px;
+
+    padding:
+        10px
+        11px;
+
+    border-radius:18px;
+
+    background:#ffffff07;
+
+    border:
+        1px solid #ffffff12;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    transition:.25s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.item:before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffd21a14,
+            transparent
+        );
+
+    transform:
+        translateX(-120%);
+
+    transition:.5s;
+}
+
+.item:hover:before{
+
+    transform:
+        translateX(120%);
+}
+
+.item:active{
+    transform:scale(.985);
+}
+
+.ic{
+    width:42px;
+    height:42px;
+
+    flex:none;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffdd3c,
+            #e6a900
+        );
+
+    color:#111;
+
+
+    display:grid;
+
+    place-items:center;
+
+    font-size:18px;
+
+    font-weight:900;
+
+    box-shadow:
+        0 7px 22px #ffd21a1c;
+}
+
+.item b{
+    display:block;
+
+    font-size:14px;
+}
+
+.item small{
+    display:block;
+
+    color:#8f8f8f;
+
+    font-size:9px;
+
+    margin-top:2px;
+}
+
+/* Copy button */
+
+.copy{
+    margin-right:auto;
+
+    border:
+        1px solid #ffd21a55;
+
+    color:#ffd21a;
+
+    background:#ffd21a08;
+
+    border-radius:10px;
+
+    padding:
+        6px
+        8px;
+
+    font:
+
+        800 9px "Vazirmatn";
+
+    cursor:pointer;
+}
+
+/* Map */
+
+.map{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:4px;
+
+    margin-top:10px;
+
+    width:100%;
+
+    min-height:72px;
+
+    border-radius:17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd21a,
+            #ffb600
+        );
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:900;
+
+    font-size:12px;
+
+    box-shadow:
+        0 12px 32px #ffd21a1c;
+
+    transition:.25s;
+}
+
+.map:hover{
+    transform:translateY(-2px);
+
+    filter:brightness(1.05);
+}
+
+/* Features */
+
+.features{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin:
+        22px
+        0
+        5px;
+
+    border-top:
+        1px solid #ffffff10;
+
+    padding-top:19px;
+}
+
+.feature{
+    text-align:center;
+
+
+    padding:
+        0
+        5px;
+
+    position:relative;
+}
+
+.feature:not(:last-child):after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:5px;
+
+    height:35px;
+
+    width:1px;
+
+    background:#ffffff12;
+}
+
+.ficon{
+
+    width:38px;
+    height:38px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:grid;
+
+    place-items:center;
+
+    border:
+        1px solid #ffd21a77;
+
+    color:#ffd21a;
+
+    background:#ffd21a09;
+
+    font-size:16px;
+}
+
+.feature b{
+    display:block;
+
+    font-size:9px;
+
+    margin-top:7px;
+
+    color:#ddd;
+
+    line-height:1.5;
+}
+
+/* Footer */
+
+.footer{
+    text-align:center;
+
+    color:#ffd21a;
+
+    font-weight:700;
+
+    font-size:13px;
+
+    margin:
+        20px
+        0
+        0;
+
+}
+
+.footer:after{
+    content:"";
+
+    display:block;
+
+    width:65px;
+
+    height:2px;
+
+    background:#ffd21a;
+
+    margin:
+        8px
+        auto
+        0;
+
+    border-radius:5px;
+
+    box-shadow:
+        0 0 14px #ffd21a;
+}
+
+/* Toast */
+
+.toast{
+    position:fixed;
+
+    z-index:20;
+
+    bottom:20px;
+
+    left:50%;
+
+    transform:
+        translate(-50%,20px);
+
+    opacity:0;
+
+    background:#fff;
+
+    color:#111;
+
+    padding:
+        10px
+        14px;
+
+    border-radius:12px;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    transition:.3s;
+
+    pointer-events:none;
+
+    white-space:nowrap;
+}
+
+.toast.show{
+    opacity:1;
+
+    transform:
+        translate(-50%,0);
+}
+
+@media(min-width:521px){
+
+    .page{
+        padding-top:25px;
+
+    }
+
+    .card{
+        box-shadow:
+            0 35px 100px #000;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="fx"></canvas>
+
+<main class="page">
+
+<header class="top">
+
+    <div class="brand">
+
+        <span class="logo"></span>
+
+        <span>
+
+            سوپر گوشت یاحقی
+        </span>
+
+    </div>
+
+    <div class="live">
+
+        <i></i>
+
+        کارت ویزیت آنلاین
+
+    </div>
+
+</header>
+
+
+<section class="card">
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <img
+            src="meat-hero.jpg"
+
+            alt="گوشت تازه و باکیفیت"
+        >
+
+        <div class="hero-glow"></div>
+
+        <div class="hero-title">
+
+            <div class="kicker">
+                سوپر گوشت
+            </div>
+
+            <h1>
+                <span>یاحقی</span>
+            </h1>
+
+            <div class="tag">
+                تازگی • کیفیت • اعتماد
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <p class="intro">
+
+            برای سفارش و ارتباط با
+
+            <b>
+                سوپر گوشت یاحقی
+            </b>
+
+            ، روی شماره موردنظر بزنید.
+
+        </p>
+
+
+        <!-- CONTACTS -->
+
+        <div class="info">
+
+            <a
+                class="item"
+                href="tel:09307152466"
+
+            >
+
+                <span class="ic">
+                    ☎
+                </span>
+
+                <span>
+
+                    <small>
+                        شماره تماس اول
+                    </small>
+
+                    <b>
+                        09307152466
+                    </b>
+
+                </span>
+
+                <button
+                    class="copy"
+                    onclick="copyNum(event,'09307152466')"
+                >
+                    کپی
+
+                </button>
+
+            </a>
+
+
+            <a
+                class="item"
+                href="tel:09020604007"
+            >
+
+                <span class="ic">
+                    ☎
+                </span>
+
+                <span>
+
+                    <small>
+                        شماره تماس دوم
+                    </small>
+
+                    <b>
+                        09020604007
+                    </b>
+
+                </span>
+
+                <button
+                    class="copy"
+                    onclick="copyNum(event,'09020604007')"
+                >
+                    کپی
+                </button>
+
+            </a>
+
+        </div>
+
+
+        <!-- MAP -->
+
+        <a
+            class="map"
+            target="_blank"
+            rel="noopener"
+            href=" https://nshn.ir/7b1JXz5JG9nh "
+
+        >
+
+
+            آدرس: بین خیابان بابک و سلمان فارسی 4 </br> </br> </br> </br>
+			</br></br>
+			      (جهت مشاهده آدرس کلیک کنید)
+
+        </a>
+
+
+        <!-- FEATURES -->
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="ficon">
+                    ✓
+                </div>
+
+                <b>
+                    تضمین کیفیت
+                </b>
+
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="ficon">
+                    ✦
+                </div>
+
+                <b>
+                    تازه و بهداشتی
+                </b>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="ficon">
+                    ♜
+                </div>
+
+                <b>
+
+                    انواع گوشت
+                </b>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="ficon">
+                    ❋
+                </div>
+
+                <b>
+                    توزیع روزانه
+                </b>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+
+            با ما همیشه تازه بمانید...
+
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<div
+    class="toast"
+    id="toast"
+>
+    شماره کپی شد ✓
+</div>
+
+
+<script>
+
+/* =========================
+   PARTICLES
+========================= */
+
+const canvas =
+    document.getElementById("fx");
+
+const ctx =
+    canvas.getContext("2d");
+
+let W;
+let H;
+
+let particles = [];
+
+
+function resize(){
+
+    W = innerWidth;
+
+    H = innerHeight;
+
+    canvas.width =
+        W * devicePixelRatio;
+
+    canvas.height =
+        H * devicePixelRatio;
+
+    ctx.setTransform(
+        devicePixelRatio,
+        0,
+        0,
+        devicePixelRatio,
+        0,
+        0
+    );
+
+
+    particles =
+        Array.from(
+            {
+                length:
+                    Math.min(
+                        45,
+                        Math.floor(W / 10)
+                    )
+            },
+            () => ({
+
+                x:
+                    Math.random() * W,
+
+                y:
+                    Math.random() * H,
+
+                r:
+                    .4 +
+                    Math.random() * 1.5,
+
+                v:
+                    .12 +
+                    Math.random() * .35,
+
+                a:
+                    .12 +
+                    Math.random() * .35
+
+            })
+        );
+
+}
+
+
+function draw(){
+
+    ctx.clearRect(
+
+        0,
+        0,
+        W,
+        H
+    );
+
+
+    for(
+        const p of particles
+    ){
+
+        p.y += p.v;
+
+
+        if(
+            p.y > H
+        ){
+
+            p.y = -3;
+
+        }
+
+
+        ctx.beginPath();
+
+
+        ctx.arc(
+            p.x,
+            p.y,
+            p.r,
+            0,
+            Math.PI * 2
+        );
+
+
+        ctx.fillStyle =
+            `rgba(
+                255,
+                210,
+                26,
+                ${p.a}
+            )`;
+
+
+        ctx.fill();
+
+    }
+
+    requestAnimationFrame(draw);
+
+}
+
+
+addEventListener(
+    "resize",
+    resize
+);
+
+resize();
+
+draw();
+
+
+/* =========================
+   COPY NUMBER
+========================= */
+
+async function copyNum(
+    e,
+    number
+){
+
+    e.preventDefault();
+
+    e.stopPropagation();
+
+
+    try{
+
+        await navigator
+            .clipboard
+            .writeText(number);
+
+        showToast(
+            "شماره کپی شد ✓"
+        );
+
+    }
+
+    catch{
+
+        showToast(number);
+
+    }
+
+}
+
+
+
+/* =========================
+   TOAST
+========================= */
+
+function showToast(text){
+
+    const toast =
+        document.getElementById(
+            "toast"
+        );
+
+
+    toast.textContent =
+        text;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    setTimeout(
+
+        () => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        1600
+    );
+
+}
+
+</script>
+
+</body>
+</html>
